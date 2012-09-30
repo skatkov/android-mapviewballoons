@@ -1,3 +1,19 @@
+# Maven Android MapView Balloons Deployer
+
+This is a very simple deployer for [this](https://github.com/jgilfelt/android-mapviewballoons) beautiful and helpful APK-lib project. To deploy this project to your local Maven repo you should clone Android MapView Balloons project, put `pom.xml` to sub-directory `android-mapviewballoons` of cloned project and run `mvn clean install`. Here you are—you could include balloons in your Maven project this way:
+
+```xml
+<dependency>
+  <artifactId>map-view-balloons</artifactId>
+  <version>1.5.1</version>
+  <groupId>com.github.jgilfelt</groupId>
+  <type>apklib</type>
+</dependency>
+```
+
+There are some troubles you could be faced. Balloons project needs to have Google Maps for Android delpoyed to local repo too, so you may want to change version of this SDK in `pom.xml` before running `mvn clean install`.
+
+
 Android MapView Balloons
 ========================
 
